@@ -1,4 +1,4 @@
-package com.example.batchprocessing;
+package com.example.classingestion;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,16 +22,17 @@ public class JavaFileReader implements ItemReader<JavaFileComponents> {
     public JavaFileComponents read() throws Exception {
 
         if (!fileIterator.hasNext()) {
+            log.info("No more files to read");
             return null; // signals end of input
         }
 
         Path file = fileIterator.next();
-        log.debug("Reading file at {}", file.toString());
+        log.info("Reading file at {}", file.toString());
         String content = Files.readString(file);
+        JavaFileComponents components = new JavaFileComponents();
 
-        JavaFileComponents javaFileComponents = new JavaFileComponents();
-        javaFileComponents.setFileName(file.getFileName().toString());
-        javaFileComponents.setSourceCode(content);
-        return javaFileComponents;
+        components.setFileName(file.getFileName().toString());
+        components.setSourceCode(content);
+        return components;
     }
 }

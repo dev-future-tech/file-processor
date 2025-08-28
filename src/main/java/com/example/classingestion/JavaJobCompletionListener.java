@@ -1,4 +1,4 @@
-package com.example.batchprocessing;
+package com.example.classingestion;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,5 +30,6 @@ public class JavaJobCompletionListener implements JobExecutionListener {
         } else {
             log.info("Job completed with status " + jobExecution.getStatus());
         }
+
     }
 }

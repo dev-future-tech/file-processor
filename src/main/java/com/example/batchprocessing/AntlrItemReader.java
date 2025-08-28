@@ -1,5 +1,6 @@
 package com.example.batchprocessing;
 
+import com.example.classingestion.JavaFileComponents;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.NonTransientResourceException;
 import org.springframework.batch.item.ParseException;

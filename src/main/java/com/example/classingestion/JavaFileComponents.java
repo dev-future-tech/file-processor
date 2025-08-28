@@ -1,4 +1,4 @@
-package com.example.batchprocessing;
+package com.example.classingestion;
 
 import java.util.ArrayList;
 import java.util.List;
